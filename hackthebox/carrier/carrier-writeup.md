@@ -23,7 +23,7 @@ UDP
 # 渗透测试
 通过浏览器打开`http://10.10.10.105/`，发现是一个登陆页面。
 
-![1549870730186](F:\学习资料\github\ctf-writeup\hackthebox\carrier\assets\1549870730186.png)
+![1549870730186](https://github.com/littleheary/ctf-writeup/blob/master/hackthebox/carrier/assets/1549870730186.png?raw=true)
 
 进行目录遍历，发现存在如下目录信息
 
@@ -60,11 +60,11 @@ python3 dirsearch.py -u http://10.10.10.105 -e php
 
 尝试访问`/doc/`，发现有两个文件。
 
-![1549870897285](F:\学习资料\github\ctf-writeup\hackthebox\carrier\assets\1549870897285.png)
+![1549870897285](https://github.com/littleheary/ctf-writeup/blob/master/hackthebox/carrier/assets/1549870897285.png?raw=true)
 
 其中的图片是一个拓扑图，pdf是一个错误代码的列表
 
-![1549870997476](F:\学习资料\github\ctf-writeup\hackthebox\carrier\assets\1549870997476.png)
+![1549870997476](https://github.com/littleheary/ctf-writeup/blob/master/hackthebox/carrier/assets/1549870997476.png?raw=true)
 
 观察到其中`45009`，可以看到提示说默认密码是序列号。
 
@@ -87,7 +87,7 @@ End of MIB
 
 成功登陆进入。
 
-![1549871250603](F:\学习资料\github\ctf-writeup\hackthebox\carrier\assets\1549871250603.png)
+![1549871250603](https://github.com/littleheary/ctf-writeup/blob/master/hackthebox/carrier/assets/1549871250603.png?raw=true)
 
 查看`Tickets`页面，发现一些信息提示。
 
@@ -107,7 +107,7 @@ End of MIB
 
 提交结果，发现确实存在命令注入，成功获得输出。
 
-![1549873194231](F:\学习资料\github\ctf-writeup\hackthebox\carrier\assets\1549873194231.png)
+![1549873194231](https://github.com/littleheary/ctf-writeup/blob/master/hackthebox/carrier/assets/1549873194231.png?raw=true)
 
 尝试构造命令，搜索`user.txt`文件，发现在`/root/user.txt`
 
