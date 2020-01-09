@@ -93,7 +93,6 @@ O:%2b4:"baby":1:{s:4:"file";s:8:"flag.php";}
 发现首页页面在cookie中存在一个字段` user=dXNlcg%3D%3D` ，将`dXNlcg%3D%3D` 转码后，得到的内容是`user` 。
 
 猜测这个可以更改为`admin` 来伪造管理员。将`admin` 使用base64转码，`YWRtaW4=` ，转码完成后篡改数据包。
-
 ![1547264443236](F:\学习资料\github\ctf-writeup\安恒杯\第27周\assets\1547264443236.png)
 
 forward以后，会发现跳转到`/admin.php` 页面，同样cookie中还存在一个user字段，并且依然需要修改。
